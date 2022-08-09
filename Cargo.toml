@@ -7,4 +7,6 @@ edition = "2021"
 
 [dependencies]
 gilrs = "0.9.0"
-
+fps_counter = "2.0.0"
+tui = "0.18"
+crossterm = "0.23"
