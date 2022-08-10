@@ -1,6 +1,6 @@
 use gilrs::{Button, Gamepad};
 
-pub fn parse(gamepad: Gamepad) {
+pub fn parse(gamepad: Gamepad) -> String {
     let mut direction = "5";
     // Direction
     if gamepad.is_pressed(Button::DPadUp) {
@@ -46,10 +46,10 @@ pub fn parse(gamepad: Gamepad) {
         action_buttons.push('F')
     }
 
-    println!(
+    format!(
         "Debug: gamepad: {}, direction: {}, buttons pressed: {}",
         gamepad.name(),
         direction,
         action_buttons
-    );
+    )
 }
